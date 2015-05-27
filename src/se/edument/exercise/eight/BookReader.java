@@ -13,25 +13,70 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
+import java.util.function.Predicate;
 
 /**
- * Created by purple.tim on 27/5/2015.
+ * Exercise eight
+ *
+ * Read xml file into DOM Document and print and manipulate the books in xml file.
+ *
+ * 1) Create BookReader class with Document attribute.
+ * 2) Read file into DOM Document
+ * 3) Implement function to print all books to standard output.
+ * 4) Implement function to add new book to DOM Document.
+ * 5) Write DOM Document to file.
+ *
+ * extra) Implement Logger interface for logging that logs to XML file
+ */
+
+/**
+ * Exercise eleven
+ *
+ * Create filter function for book attribute id and print found books to standard output.
+ *
+ * 1) Create public function to get List<Node> of book Node's
+ * 2) Create private function to loop over books and test predicate to filter out book nodes
+ *
+ */
+
+/**
+ * Read xml file from classpath into BookReader dom document attribute. Print books and create function to save new book to file.
+ *
+ * @author Tim Mickelson
+ * @since 27/05/2015
  */
 public class BookReader {
     private Document document = null;
+    private String fileName;
 
-
+    public BookReader(String fileName){
+        this.fileName = fileName;
+    }
+    /**
+     * Read books xml file into BookReader, print to standard output and then save a new book to file.
+     *
+     * @author Tim Mickelson
+     * @since 27/05/2015
+     * @param args
+     */
     public static void main(String[] args){
-        BookReader bookReader = new BookReader();
+        BookReader bookReader = new BookReader("books.xml");
         try {
             bookReader.loadXml();
-            bookReader.printBooks();
+//            bookReader.printBooks();
 
             bookReader.addBook("BK666", "Tim Mickelson", "Java Intermidiet", "Programming", 6010.25, LocalDate.now(), "Good book");
             // Print with new node
-            bookReader.printBooks();
+//            bookReader.printBooks();
+
+            List<Node> bookList = bookReader.findBook("BK666");
+            for(Node book:bookList){
+                bookReader.printBook(book);
+            }
 
             bookReader.save();
         } catch (ParserConfigurationException e) {
@@ -56,13 +101,51 @@ public class BookReader {
     public void printBooks(){
         NodeList nodeList = document.getElementsByTagName("book");
 
-        //for(Node node:nodeList){}
         for(int i=0;i<nodeList.getLength();i++){
             Node book = nodeList.item(i);
             printBook(book);
         } // end loop nodelist
 
     }  // end function printCars
+
+    /**
+     * Find book with given id attribute using Predicate inteface.
+     *
+     * @author Tim Mickelson
+     * @since 27/05/2015
+     * @param id Book id attribute
+     */
+    private List<Node> findBook(String id){
+        List<Node> books = filterBooks(b->{
+            NamedNodeMap attributes = b.getAttributes();
+            return (attributes!=null&&attributes.getLength()>0&&attributes.item(0).getTextContent().equals(id));
+        });
+
+        return books;
+    }  // end function findBook
+
+    /**
+     * Filter books with predicate. This function gets the list of book nodes and confronts them with the external conditions
+     * implemented in the predicate inteface implementation.
+     *
+     * @author Tim Mickelson
+     * @since 27/05/2015
+     * @param predicate Test interface
+     * @return List of book Node's that correspond to predicate condition.
+     */
+    private List<Node> filterBooks(Predicate<Node> predicate){
+        NodeList nodeList = document.getElementsByTagName("book");
+        List<Node> books = new ArrayList<>();
+
+        for(int i=0;i<nodeList.getLength();i++){
+            Node book = nodeList.item(i);
+            if(predicate.test(book))
+                books.add(book);
+        } // end loop nodelist
+
+        return books;
+    }  // end function filterBooks
+
 
     /**
      * Print all child nodes to book Node to standard output with tag name and text content.
@@ -97,13 +180,19 @@ public class BookReader {
      * @throws SAXException
      */
     public void loadXml() throws ParserConfigurationException, IOException, SAXException {
-        InputStream is = getClass().getClassLoader().getResourceAsStream("books.xml");
+        InputStream is = getClass().getClassLoader().getResourceAsStream(fileName);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
         document = builder.parse(is);
     }  // end function loadXml
 
+    /**
+     * Add new book Element to DOM Document.
+     *
+     * @author Tim Mickelson
+     * @since 27/05/2015
+     */
     public void addBook(String bookId, String author, String title, String genre, Double price, LocalDate publishDate, String description){
         Element book = document.createElement("book");
         Node root = document.getDocumentElement();
@@ -137,8 +226,14 @@ public class BookReader {
 
     } // end function addBook
 
+    /**
+     * Save DOM Document to text file.
+     * @throws TransformerException
+     * @throws URISyntaxException
+     * @throws FileNotFoundException
+     */
     public void save() throws TransformerException, URISyntaxException, FileNotFoundException {
-        URL url = getClass().getClassLoader().getResource("books.xml");
+        URL url = getClass().getClassLoader().getResource(fileName);
         System.out.println(url.toURI().toString());
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         File file = new File(url.toURI() );
