@@ -7,12 +7,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by purple.tim on 27/5/2015.
+ * Exercise seven
+ *
+ * This exercise will simulate a chat with some participants. The messages will just be put out on standard output
+ * instead of actually being sent to a receiver. The exercise should throw a custom Exception on bad receiver or sender.
+ * The custom exception will hold an encapsulated custom enumerator for different HTTP error codes.
+ *
+ * 1) Create interface Logger with method log(String message).
+ * 2) Let CustomLogger from exercise four implement the logger.
+ * 3) Create class ChatSession with list of encapsulated participants and instance of Logger interface injected in constructor or set with setter.
+ * 4) Create DTO bean Participant as inner class with String attribute ip
+ * 5) Create HttpCode enumerator with HTTP error codes.
+ * 6) Create class HttpException that extends Exception class and encapsulates HttpCode attribute.
+ * 7) Create a MessageDispatcher class with sendMessage function that takes receiver, sender and message in input and specially throws an HttpException.
+ * 8) Create a situation where exception can be forced and print cause to standard output.
+ * 9) Create main function and test the chat with the case all is good and then with an exception.
+ */
+
+/**
+ * Class that simulates chat with given participant. On error throws custom Exception with custom enumerator.
+ *
+ * @author Tim Mickelson
+ * @since 27/05/2015
  */
 public class ChatSession {
-    Logger logger = new CustomLogger();
+    Logger logger = null;
     MessageDispatcher dispatcher = new MessageDispatcher();
     List<Participant> participants = new ArrayList<>();
+
+    public ChatSession(Logger logger){
+        this.logger = logger;
+    }
 
     /**
      * Just add participant to list with no checks.
@@ -27,7 +52,8 @@ public class ChatSession {
      * @param args
      */
     public static void main(String[] args){
-        ChatSession session = new ChatSession();
+        Logger logger = new CustomLogger();
+        ChatSession session = new ChatSession(logger);
         Participant participant = new Participant();
         participant.setIp("126.0.0.1");
 
@@ -57,7 +83,7 @@ public class ChatSession {
                 dispatcher.sendMessage(sender, receiver, msg);
             } catch (HttpException e) {
                 // Dont block, keep sending to other participants
-                logger.log(String.format("Error %s", e.getHttpCode().toString()));
+                logger.log(String.format("Error %s", e.getHttpError().toString()));
             }
         }
 
@@ -79,7 +105,7 @@ public class ChatSession {
          */
         public void sendMessage(Participant sender, Participant receiver, String message) throws HttpException {
             if(receiver.getIp()==null){
-                throw new HttpException(HttpException.HttpCode.NOT_FOUND, "Participant ip not definied");
+                throw new HttpException(HttpException.HttpError.NOT_FOUND, "Participant ip not definied");
             }
             System.out.println(String.format("%s sent to ip %s from ip %s", message, receiver.getIp(), sender.getIp()));
         }
@@ -92,9 +118,6 @@ public class ChatSession {
      */
     private static class Participant{
         private String ip;
-        private String handle;
-        private String firstName;
-        private String lastName;
 
         public String getIp() {
             return ip;
@@ -104,29 +127,6 @@ public class ChatSession {
             this.ip = ip;
         }
 
-        public String getHandle() {
-            return handle;
-        }
-
-        public void setHandle(String handle) {
-            this.handle = handle;
-        }
-
-        public String getFirstName() {
-            return firstName;
-        }
-
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-
-        public String getLastName() {
-            return lastName;
-        }
-
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
     }  // end class Participant
 
 }  // end public class ChatSession

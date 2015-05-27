@@ -5,6 +5,6 @@ package se.edument.exercise.four;
  */
 public interface Logger {
 
-    public void log(String message);<
+    public void log(String message);
 
 }

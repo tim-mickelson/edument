@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stock>
+    <car id="abc 123">
+        <brand>Volvo</brand>
+        <condition>Poor</condition>
+        <price currency="SEK">12500</price>
+    </car>
+    <car id="def 456">
+        <brand>Fiat</brand>
+        <condition>Good</condition>
+        <price currency="SEK">254000</price>
+    </car>
+</stock>

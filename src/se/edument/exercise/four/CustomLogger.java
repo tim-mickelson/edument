@@ -5,15 +5,18 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Exercise four
+ * Exercise four.
  *
+ * The purpouse of this exercise is to get aquanted with formatting currency and dates switching the Locale between Swedish, Brittish and US.
  *
- *
- * 1) Create interface Logger with one function log that takes a String argument.
- * 2) Create a class CustomLogger that implements the Logger interface and has a Locale member with default Swedish locale.
- * 3) Create setter for locale
- * 4) Implement the log function formatting
- *
+ * 1) Create a class CustomLogger that has an encapsulated Locale attribute.
+ * 2) Create a setter for the Locale so it is possible to alter the Locale externally.
+ * 3) Create the log function as so it takes the parameters, String brand, Double price, Date purchaseDate
+ * 4) The implementation of the log function should use the Locale for formatting and including all parameters and put on standard output.
+ * 5) Create main function and test the logger  with Locale for GB, US and SE
+ */
+
+/**
  *
  * Simple logger that will log to console information of a car.
  *
