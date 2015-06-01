@@ -1,4 +1,4 @@
-package se.edument.exercise.eight;
+package se.addskills.day2.excercise8B;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -238,7 +237,7 @@ public class BookReader {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-
+        
         File file = new File(url.toURI() );
         OutputStream os = new FileOutputStream(file);
         Result result = new StreamResult(os);
