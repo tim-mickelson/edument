@@ -1,0 +1,159 @@
+ABC, 1985, Interpreted procedural language from the mid-1980s
+ACSL, 1981, Advanced Continuous Simulation Language, Fortran-based
+Ada, 1987, US Department Of Defense block-structured compiled language
+Agora, 1994, Message-passing OO language with prototyping.
+Alef, 1995, Block-structured network application language from Lucent
+Algol, 1960, Compiled block-structured language
+Algol68, 1968, Successor to Algol, sophisticated procedural language
+AMPL, 1990, Declarative language for numerical modelling created at Bell Labs in 1990
+APL, 1964, Array-oriented interpreted language from the 1960s
+AppleScript, 1993, Interpreted scripting language for Macintosh
+Argus, 1982, Distributed, parallel programming language from MIT, 1990s
+Autolisp, 1986, Lisp dialect used as extension language for AutoCAD
+Awk, 1977, Interpreted string processing language on Unix
+Babel, 1994, Abstract state machine functional language, academic, 1994
+BALM, 1970, Block and List Manipulation, Algol-like language, New York, 1970
+BASIC, 1963, Procedural language designed for novices, 1963
+BCPL, 1960, Low-level block-structured language, interpreted, early 1970s
+Brainfuck, 1993, Designed to challenge and amuse developers.
+Befunge, 1993, 2-dimensional low-level interpreted (weird) language
+BETA, 1983, Object-oriented portable compiled language, 1983
+BLooP, 1979, Simple recursive language from Godel, Escher, Bach, 1979
+C, 1972, Low-level block-structure language developed for Unix
+C++, 1983, Complex object-oriented language derived from C
+CFML, 1995, Cold Fusion Markup Language, web server scripting, Allaire, 1995
+Cilk, 1997, Parallel variant of C, MIT, 1997.
+CLAIRE, 1995, Academic OO language with logic programming, France, 1995
+CMS-2, 1975, Structure language used for military embedded systems, 1975
+COBOL, 1959, One of the older programming languages. A business-oriented procedural language
+Cocoa, 1995, Visual multimedia programming system, Apple, 1995
+Common Lisp, 1984, Standardized dialect of Lisp from late 1980s
+Concurrent Clean, 1984, Pure functional language with parallelism, 1984
+CORAL 66, 1964, UK MoD block-structure compiled language, 1964
+CorbaScript, 1998, OO scripting language for CORBA, France, 1998
+Cube, 1991, Visual programming language, 1991
+Curry, 1997, Pure functional language w/ logic features, Germany, 1997
+Datalog, 1984, Variant of Prolog for relational database, 1984
+Delphi, 1990, Object-oriented dialect of Pascal, by Borland, mid-1990s. Initially called Object Pascal
+DPL, 1994, Decision Programming Language, A.D.A. Inc, 1994
+Dynace, 1993, Extension of C with dynamic object-oriented features, 1993
+ECMAScript, 1997, Name under which Javascript is being standardized
+Eiffel, 1986, Dynamic object-oriented language with safety features
+Ellie, 1990, OO language with fine-grain parallelism,, Denmark, 1990
+Erlang, 1986, Functional language for telecom system design from Ericsson
+Esterel, 1992, Synchronous reactive programming language, INRIA, 1992
+FLooP, 1979, Simple recursive language from Godel, Escher, Bach, 1979
+Forms/3, 1991, Visual, declarative language based on spreadsheet paradigm, 1991
+Forth, 1970, Stack-based threaded interpreted language, 1970
+FORTRAN, 1954, Math-oriented block-structured compiled language
+FP, 1977, Original pure functional language
+Goedel, 1994, Academic logic programming language
+Haskell, 1990, Strongly-typed pure functional language
+Hope, 1978, Small pure functional language with ADTs.
+HTML, 1991, Hypertext markup language. Invented at CERN.
+ICI, 1992, Block-structured interpreted scripting language, 1992
+INTERCAL, 1972, Hilarious parody language from 1970s
+Interlisp, 1975, Powerful and influential dialect of Lisp, 1975-85
+J, 1990, ASCII-friendly dialect of mathematical language APL, 1990
+Jam, 1997, Specification language for programming PLDs, Stag Corp, 1997?
+Java, 1995, Object-oriented multi-threaded portable language, Sun, 1995
+JavaScript, 1994, Semi-OO interpreted scripting language for web browsers, 1994
+Jovial, 1960, Extended dialect of Algol60, used by US DoD
+JScript, 1996, Microsoft's marketing name for their Javascript implementation
+K, 1999, Database manipulation language, 1999
+Leda, 1988, Multi-paradigm academic language, 1988
+LIFE, 1993, Academic language for Logic, Functions, Equations, 1993
+Limbo, 1996, Procedural multi-threaded language for the Inferno OS, 1996
+Linoleum, 2001, Structured language for low-level code, 2001
+Lisp, 1956, Powerful lambda-expression-based language, 1956-present
+Logo, 1967, Graphics-oriented procedural teaching language, Papert, 1967
+Lua, 1994, Interpreted embeddable scripting language, 1994
+Lucid, 1976, Parallel dataflow-based language, academic, 1976
+m4, 1977, Macro processor for Unix environment
+Macsyma, 1968, Symbolic mathematics language and system
+Magma, 1993, Mathematical language and system from Australia
+Mathematica, 1987, Popular commercial mathematics language and system
+Mawl, 1995, Implicitly multi-threaded web services language
+Mercury, 1993, Logic programming language with ADTs, Australia
+Miranda, 1985, Lazy pure functional language w/pattern matching
+Miva, 1998, XML-based scripting language for web servers
+ML, 1990, Non-pure functional language, standardized in 1990 and 97
+Modula-2, 1980, Strongly-typed block-structured compiled language, Wirth, 1980
+Modula 3, 1988, Modula-2 extended with OOP and error handling, DEC, 1988
+MUMPS, 1966, Massachusetts General Hospital Utility Multi-Programming System. Database language used in medical informatics, also called M.
+Napier88, 1988, Algol-like ADT language with persistence features, 1988
+NESL, 1992, Data-parallel functional language, academic, 1992
+NIAL, 1981, Interpreted functional language emphasizing arrays, 1981-86
+Oberon, 1985, Compiled block-structured language, OO features, 1985-88
+Objective-C, 1984, C extended for object-oriented programming, 1984
+Obliq, 1993, Distributed OO scripting language, interpreted, DEC, 1993
+occam, 1982, Low-level parallel programming language based on CSP, 1982-87
+OPS5, 1977, Rule-based expert system language, 1977
+Orca, 1985, Shared-object distributed programming language, 1985
+Orthogonal, 1993, Orthogonal is an unusual 2D computer language in which your program flow can go sideways too.
+Oz, 1994, Declarative parallel language, academic, 1994 and 97
+Pari, 1985, Language and system for computer algebra and computations
+Pascal, 1968, Influential block-structured compiled language, Wirth, 1968
+Perl 6, 2000, Modern multiparadigm language
+Perl, 1986, Popular interpreted scripting language, some OO features, 1986
+PHP, 1995, Server-side web page scripting language, 1995
+Pict, 1993, Concurrent language based on Pi-calculus, Indiana, 1993
+Pike, 1996, Interpreted OO language similar to C++, 1996
+Pilot, 1962, Simple imperative scripting language for CAI, 1962
+Pizza, 1997, Java dialect with functional programming features, 1997
+Pliant, 1999, Functional/Expression oriented extensible language, France, 1999
+PL/C, 1970, Subset dialect of PL/I, popular in academia
+PL/I, 1964, Large complex block-structure compiled language, IBM, 1964
+Postscript, 1982, Threaded interpreted graphics language, Adobe, 1982
+PPL, 1970, Polymorphic programming language from 1970s?
+Prolog, 1977, Progenitor logic programming language, 1977
+PSL, 1998, Portable Standard Lisp, dialect related to Maclisp
+Python, 1991, Interpreted object-oriented scripting language, 1991
+QBasic, 1991, Extended dialect of Basic once popular on PCs
+Quake-C, 1996, Subset dialect used as an extension language for some games
+RLaB, 1996, Interpreted language for math and data analysis, 1996
+REBOL, 1997, Interpreted, OO and functional scripting language, 1997
+Reduce, 1964, Symbolic mathematics language and system based on Lisp, 1964.
+Rexx, 1979, Block-structured scripting language, IBM, 1979-85
+Rigal, 1987, Pattern-matching language for compiler design, U. Latvia, 1987
+RPG, 1959, Text processing and database language for mainframes
+Ruby, 1999, Object-oriented scripting language, Japan, 1999
+S, 1977, Statistics and data analysis language, Bell Labs, 1977
+Sather, 1990, Object-oriented language with powerful type system, 1990
+Scheme, 1975, Lexically scoped variant of Lisp, MIT, 1975
+ScriptX, 1990, Scripting language for PCs
+SeeDo, 1997, Visual programming system for AI research, 1997
+Self, 1986, Dynamic object-oriented language for applications, Sun, 1986-90
+SETL, 1969, Block-structure language extended with powerful set, 1969-70
+SGML, 1986, Standard Generalized Markup Language. Powerful extensible system for text markup. HTML and XML are subsets of SGML
+sh, 1977, Bourne Shell for UNIX
+Show-and-Tell, 1982, Visual programming language, academic, 1982?
+Simscript, 1963, Commercial discrete-event simulation language
+SIMULA, 1967, Original object-oriented language, made for simulation, 1967
+Sina, 1995, Object-oriented language based on composition filters model, 1995?
+SISAL, 1990, Parallel functional language for scientific applications, 1990
+SLAM, 1976, Discrete-event simulation language based on Fortran, 1976
+Smalltalk, 1972, Influential dynamic object-oriented language, 1972
+SMIL, 1997, Description language for controlling multimedia, 1997
+SNOBOL, 1962, Interpreted string processing language with pattern matching, 1962
+Soar, 1983, Cognitive AI research language, CMU, 1983
+SPARCL, 1993, Visual language w/ logic and set features, Kansas, 1993
+SPITBOL, 1977, Compiled dialect of SNOBOL for mini-computers
+SQL, 1974, Structured Query Language. Used to query relational databases.
+Tcl, 1990, Interpreted embeddable scripting language, string-oriented, 1990
+Telescript, 1990, Object-oriented scripting language for net devices
+TeX, 1978, Interpreted document formatting language, heavy on macros
+Theta, 1994, Object-oriented language for Thor database system, MIT, 1994
+Turing, 1987, Structured language for education, U Toronto, 1987
+UFO, 1996, OO Functional language with parallelism, UK, 1996
+VBScript, 1996, Dialect of Basic, scripting language for web tools, Microsoft
+C#, 2001, A multiparadigm language
+VHDL, 1985, System simulation language, mainly for digital systems, 1985
+Visual Basic, 1991, Advanced dialect of Basic for app development on PCs
+Visual Basic .NET, 2001, An object oriented version of the older Visual Basic versions, running on .NET
+xlisp, 1985, Free dialect of Common Lisp, some OO extensions, 1985
+XML, 1996, Extensible text mark-up language, no execution capability
+Yacc, 1970, A programming utility for generating parsers in C
+Yorick, 1994, Block-structured language for computation and arrays, LLNL, 1994
+Z, 1977, Formal definition language for system description and proofs
+ZPL, 1997, Parallel scientific computation language, 1997

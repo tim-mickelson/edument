@@ -12,6 +12,10 @@ import org.w3c.dom.Element;
 
 public class Program {
 
+	/**
+	 * Read inputs and try with regexps.
+	 * @throws ParserConfigurationException
+	 */
 	public static void main(String[] args) throws ParserConfigurationException {
 		Scanner in = new Scanner(System.in);
 		String input = "";
@@ -66,6 +70,6 @@ public class Program {
 		Attr attr = doc.createAttribute("id");
 		attr.setValue("1");
 		staff.setAttributeNode(attr);
-	}
+	}  // end function main
 
-}
+}  // end class Program

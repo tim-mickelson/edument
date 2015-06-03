@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise4;
+package se.addskills.day1.excercise4A_tim;
 
 import java.text.MessageFormat;
 import java.util.Date;

@@ -10,9 +10,15 @@ public enum WeightUnits {
 	
 	WeightUnits(double conversion) {
 		this.conversion = conversion;
-	}
-	
+	}  // end constructor
+
+	/**
+	 * Utility function to extract weight conversation factor from given WeightUnits unit.
+	 * @param unit WeightUnits enumerator value
+	 * @return conversation factor
+	 */
 	static double valueOf(WeightUnits unit) {
 		return unit.conversion;
-	}
-}
+	}  // end function valueOf
+
+}  // end enumerator WeightUnits

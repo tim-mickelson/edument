@@ -10,7 +10,7 @@ public class TestAnnotation {
     @Test
     public void testAnnotation(){
         Printer printer = new Printer();
-Object o;
+        Object o;
         printer.print();
     } // end function testAnnotation
 

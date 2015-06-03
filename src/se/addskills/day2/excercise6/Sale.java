@@ -3,13 +3,23 @@ package se.addskills.day2.excercise6;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Simple POJO for a sale. Also contains validate function with regular expression. Unknown pattern
+ * since it is input.
+ */
 public class Sale {
 	private String seller;
 	private String buyer;
 	private String ssn;
 	private String Reg;
 	private String price;
-	
+
+	/**
+	 * Validate input String with given pattern.
+	 * @param pattern Regular expression pattern
+	 * @param string String to validate with pattern
+	 * @return false if matches are found in the pattern
+	 */
 	public boolean validate(Patterns pattern, String string) {
 		Pattern p = Pattern.compile(pattern.toString());
 		Matcher m = p.matcher(string);
@@ -19,7 +29,7 @@ public class Sale {
 			System.out.println("Wrong input!");
 			return false;
 		}
-	}
+	}  // end function validate
 
 	public String getSeller() {
 		return seller;

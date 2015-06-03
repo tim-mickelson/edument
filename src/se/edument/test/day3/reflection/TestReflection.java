@@ -29,7 +29,7 @@ public class TestReflection {
                 if(method.getName().equals("setFullName")){
                     Object[] parameters = {"firstName", "lastName"};
                     method.invoke(object, parameters);
-                    ((Contact) object).toString();
+                   // ((Contact) object).toString();
                 }
                 MultiCall call = method.getAnnotation(MultiCall.class);
                 if(call!=null){
