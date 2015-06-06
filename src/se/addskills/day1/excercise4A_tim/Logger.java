@@ -5,6 +5,6 @@ package se.addskills.day1.excercise4A_tim;
  */
 public interface Logger {
 
-    public void log(String message);
+    void log(String message);
 
 }

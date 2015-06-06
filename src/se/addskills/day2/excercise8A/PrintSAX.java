@@ -48,22 +48,6 @@ public class PrintSAX extends DefaultHandler {
 		return books;
 	}
 
-	public static void main(String[] args) {
-		try {
-
-			SAXParserFactory factory = SAXParserFactory.newInstance();
-			SAXParser parser = factory.newSAXParser();
-			PrintSAX printer = new PrintSAX();
-
-			InputStream xmlFile = printer.load();
-			parser.parse(xmlFile, printer);
-
-			List<Book> books = printer.getBooks();
-			for(Book book:books)
-				System.out.printf("%s%n", book.toString());
-		} catch (Exception e) {e.printStackTrace();}
-	}
-
 	/**
 	 * Get InputStream for books.xml file from classpath.
 	 * @return

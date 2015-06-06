@@ -1,7 +1,7 @@
 package se.addskills.day1.excercise3;
 
 /**
- * POJO for Language data
+ * Very simple POJO for Language data
  */
 public class LanguageData {
 	private String name;
@@ -11,18 +11,23 @@ public class LanguageData {
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getReleaseYear() {
 		return releaseYear;
 	}
+
 	public void setReleaseYear(int i) {
 		this.releaseYear = i;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}

@@ -1,6 +1,6 @@
 package se.addskills.day3.excercise10;
 
-public class Main {
+public class Program {
 	public static void main(String[] args) throws SecurityException, ClassNotFoundException {
 		// Default values on class AClass are valid. Validate and prove on standard output.
 		AClass c = new AClass();

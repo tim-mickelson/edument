@@ -1,14 +1,19 @@
 package se.addskills.day2.excercise5;
 
+/**
+ * Enumerator for weight units with converter constants.
+ *
+ * @author Tim Mickelson
+ * @since 06/06/2015
+ */
 public enum WeightUnits {
 	Pound (2.20462),
 	Kilogram (1),
-	Gram (1000),
-	Tonne (0.001);
+	Gram (1000);
 	
 	private final double conversion;
 	
-	WeightUnits(double conversion) {
+	private WeightUnits(double conversion) {
 		this.conversion = conversion;
 	}  // end constructor
 

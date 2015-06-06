@@ -1,5 +1,12 @@
 package se.addskills.day2.excercise5;
 
+/**
+ * Weight converter permitting to save weight units in lbl or kg and extract as lbl or kg.
+ * The unit is defined together with the weight on input.
+ *
+ * @author Tim Mickelson
+ * @since 06/06/2015
+ */
 public class Weight {
 	private double weightInKG;
 

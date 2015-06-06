@@ -34,7 +34,7 @@ public class Stock implements Iterable<Car> {
 	public void sell(Car car, String seller, String buyer, double prize) {
 		this.stock.remove(car);
 		TradeMessage message = new TradeMessage(car, seller, buyer, prize);
-		logger.Log(message);
+		logger.log(message);
 	}  // end function sell
 
 }  // end class Stock

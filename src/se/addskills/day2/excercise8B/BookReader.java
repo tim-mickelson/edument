@@ -55,41 +55,6 @@ public class BookReader {
     public BookReader(String fileName){
         this.fileName = fileName;
     }
-    /**
-     * Read books xml file into BookReader, print to standard output and then save a new book to file.
-     *
-     * @author Tim Mickelson
-     * @since 27/05/2015
-     * @param args
-     */
-    public static void main(String[] args){
-        BookReader bookReader = new BookReader("books.xml");
-        try {
-            bookReader.loadXml();
-//            bookReader.printBooks();
-
-            bookReader.addBook("BK666", "Tim Mickelson", "Java Intermidiet", "Programming", 6010.25, LocalDate.now(), "Good book");
-            // Print with new node
-//            bookReader.printBooks();
-
-            List<Node> bookList = bookReader.findBook("BK666");
-            for(Node book:bookList){
-                bookReader.printBook(book);
-            }
-
-            bookReader.save();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        }
-    } // end function main
 
     /**
      * Get all <i>book</i> elements in XML and print the child nodes with text content.
@@ -114,7 +79,7 @@ public class BookReader {
      * @since 27/05/2015
      * @param id Book id attribute
      */
-    private List<Node> findBook(String id){
+    public List<Node> findBook(String id){
         List<Node> books = filterBooks(b->{
             NamedNodeMap attributes = b.getAttributes();
             return (attributes!=null&&attributes.getLength()>0&&attributes.item(0).getTextContent().equals(id));
@@ -153,7 +118,7 @@ public class BookReader {
      * @since 27/05/2015
      * @param book Book node
      */
-    private void printBook(Node book){
+    public void printBook(Node book){
         System.out.println("+---------------------------------------------------------------------------------------------------------------------+");
         NamedNodeMap attrs = book.getAttributes();
         if(attrs!=null&&attrs.getLength()>0){

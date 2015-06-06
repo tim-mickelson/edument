@@ -1,5 +1,8 @@
 package se.addskills.day1.excercise4B;
 
+/**
+ * Object with Car instance and seller, buyer names and price.
+ */
 public class TradeMessage {
 	private Car car;
 	private String seller;
@@ -44,4 +47,5 @@ public class TradeMessage {
 	public void setPrize(double prize) {
 		this.prize = prize;
 	}
-}
+
+}  // end class TradeMessage

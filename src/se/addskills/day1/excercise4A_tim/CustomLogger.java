@@ -23,36 +23,9 @@ import java.util.Locale;
  * @author Tim Mickelson
  * @since 27/05/2015
  */
-public class CustomLogger implements Logger {
+public class CustomLogger  implements Logger {
     // Default to Sweden :)
     Locale locale = new Locale("sv", "SE");
-
-    /**
-     * Main class to run the example with various locales.
-     *
-     * @author Tim Mickelson
-     * @since 27/05/2015
-     * @param args Command line arguments
-     */
-    public static void main(String[] args){
-        // Create instance of custom logger
-        CustomLogger logger = new CustomLogger();
-        // Car attributes
-        String brand = "Ferrari";
-        Double price = 100356.05;
-        Date purchase = new Date();
-        // Log with Swedish locale
-        logger.log(brand, price, purchase);
-        // Log with English locale
-        logger.setLocale(new Locale("en", "GB"));
-        logger.log(brand, price, purchase);
-        // Log with US local
-        logger.setLocale(new Locale("en", "US"));
-        logger.log(brand, price, purchase);
-        // Log with Italian local
-        logger.setLocale(new Locale("it", "IT"));
-        logger.log(brand, price, purchase);
-    }  // end main
 
     /**
      * Print to standard output a formated string that is formatted with Locale.
@@ -70,13 +43,9 @@ public class CustomLogger implements Logger {
         MessageFormat msgFormatter = new MessageFormat(pattern, locale);
         Object[] params = {brand, price, purchase};
         // Format and print to standard output
-        System.out.println( msgFormatter.format(params));
+        log(msgFormatter.format(params));
     }  // end function log
 
-    @Override
-    public void log(String message){
-        System.out.println(message);
-    }
 
     /**
      * Change Locale of CustomLogger instance.
@@ -88,4 +57,8 @@ public class CustomLogger implements Logger {
         this.locale = locale;
     }
 
+    @Override
+    public void log(String message) {
+        System.out.println(message);
+    }
 }  // end class CustomLogger

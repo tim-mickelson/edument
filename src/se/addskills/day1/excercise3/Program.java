@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Read CSV file, split and inject into LanguageData beans and then print to standard output.
+ */
 public class Program {
 
 	/**

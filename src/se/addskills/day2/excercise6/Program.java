@@ -14,6 +14,13 @@ public class Program {
 
 	/**
 	 * Read inputs and try with regexps.
+	 *
+	 * 1. Create patterns
+	 *   a) For name (upper case first name and uppercase surname)
+	 *   b) SSN (10 digits or 11 digits with '-' OR 12 digits or 13 with '-'
+	 *   c) Registration number, three upper cased followed by 3 numbers
+	 *   d) Price (one or more digits followed by one of: skr, eur, usd
+	 *
 	 * @throws ParserConfigurationException
 	 */
 	public static void main(String[] args) throws ParserConfigurationException {

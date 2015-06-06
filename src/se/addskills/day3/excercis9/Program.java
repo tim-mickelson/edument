@@ -3,6 +3,15 @@ package se.addskills.day3.excercis9;
 public class Program {
 
 	/**
+	 * 1. Create wallet that holds money
+	 * 		a) Create thread safe function to add money.
+	 * 		b) Create thread safe function to extract money
+	 * 2. Implement class Producer that implements Runnable and holds a reference to the Wallet
+	 * 		a) Make it loop some 10 times adding random amount of money between 0 and 100
+	 * 3. Implement class Consumer that implements Runnable and holds a reference to the Wallet
+	 * 		a) Make it loop some 10 times extracting random amount of money from 0 and 100
+	 * 		b) If it can not extract money, make it wait until there is money.
+	 *
 	 * Create a producer that will add money to the wallet and a consumer that will extract.
 	 *
 	 * Try removing the notify() in the add function, what will hapend? Since the Consumer after extracting will wait() it will not

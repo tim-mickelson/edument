@@ -1,7 +1,8 @@
 package se.addskills.day1.excercise1;
 
 /**
- * Simple POJO with account balance.
+ * Simple POJO with account balance implementing the IAccount interface.
+ *
  * @author Tim Mickelson
  * @since 03/06/2015
  */

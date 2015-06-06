@@ -44,7 +44,7 @@ public class Logger implements ILogger {
 	 * @param msg
 	 */
 	@Override
-	public void Log(TradeMessage msg) {
+	public void log(TradeMessage msg) {
 		Object[] data = {
 				new Date(),
 				msg.getCar().getCarBrand(),
