@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise2A;
+package se.addskills.day1.exercise2A;
 
 public class Program {
 

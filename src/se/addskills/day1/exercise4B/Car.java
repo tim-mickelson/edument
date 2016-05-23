@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise4B;
+package se.addskills.day1.exercise4B;
 
 /**
  * Car POJO

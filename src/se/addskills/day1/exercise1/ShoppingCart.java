@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise1;
+package se.addskills.day1.exercise1;
 
 import java.util.ArrayList;
 import java.util.Iterator;

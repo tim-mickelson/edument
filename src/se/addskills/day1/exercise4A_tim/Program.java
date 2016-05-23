@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise4A_tim;
+package se.addskills.day1.exercise4A_tim;
 
 import java.util.Date;
 import java.util.Locale;

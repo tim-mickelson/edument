@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise1;
+package se.addskills.day1.exercise1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -132,6 +132,7 @@ public class ShoppingDemo {
 	 * Just remove all products in cart.
 	 */
 	private void EmptyShoppingCart() {
+		account.add(cart.totalSum());
 		cart.clear();
 		System.out.println();
 		System.out.println("--- Cleared shopping cart ---");
@@ -144,25 +145,22 @@ public class ShoppingDemo {
 	private void PaymentDialog() {
 		if (cart.isEmpty()) {
 			System.out.println("--- Cart is empty ---");
-			in.close();
 			return;
 		}
 		
 		double sum = cart.totalSum();
 		
-		if (sum > account.balance()) {
+		if (account.balance() < 0) {
 			System.out.println("Sorry, you do not have enough funds for purchase.");
 		} else {
 			System.out.print("Do you want to pay? [y/n]: ");
 			String input = in.next();
 			
 			if (input.equalsIgnoreCase("n")) {
-				in.close();
 				return;
 			}
 			
 			System.out.println("Thank you. Your order is being processed");
-			account.remove(sum);
 			cart.clear();
 		}  // end balance ok
 	}  // end function PaymentDialog
@@ -181,7 +179,7 @@ public class ShoppingDemo {
 		
 		int i = 1;
 		for (Product product:cart) {
-			System.out.printf("%1$d) %2$s. Price: %3$s", i++, product.getName(), product.getPrice()); 
+			System.out.printf("%1$d) %2$s. Price: %3$s%n", i++, product.getName(), product.getPrice());
 		}
 		
 		System.out.println();

@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise3;
+package se.addskills.day1.exercise3;
 
 /**
  * Very simple POJO for Language data

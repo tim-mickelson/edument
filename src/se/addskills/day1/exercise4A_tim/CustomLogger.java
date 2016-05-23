@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise4A_tim;
+package se.addskills.day1.exercise4A_tim;
 
 import java.text.MessageFormat;
 import java.util.Date;
@@ -53,6 +53,7 @@ public class CustomLogger  implements Logger {
      * @since 27/05/2015
      * @param locale
      */
+    @Override
     public void setLocale(Locale locale){
         this.locale = locale;
     }
@@ -61,4 +62,5 @@ public class CustomLogger  implements Logger {
     public void log(String message) {
         System.out.println(message);
     }
+
 }  // end class CustomLogger

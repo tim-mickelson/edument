@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise1;
+package se.addskills.day1.exercise1;
 
 /**
  * Simple POJO for generic Product
@@ -27,5 +27,9 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
+	@Override
+	public String toString(){
+		return name;
+	}
 }  // end class Product

@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.function.Consumer;
 
 /**
  * Simple JUnit String manipulation tests.
@@ -18,6 +19,37 @@ import java.util.Locale;
  * Created by Tim on 2015-05-23.
  */
 public class TestString {
+
+    @Test
+    public void testLambda(){
+        Integer i = 8;
+
+
+        Lambda lambda = new Lambda();
+        Consumer<Void> consumerOne = (p)->{
+            lambda.pippo(i);
+        };
+
+        Consumer<Void> consumerTwo = (p)->{
+            lambda.pero(i);
+        };
+
+        // The functional reference must be assigned to a corresponding Functional interface type. E.g. nada takes
+        // Integer on input and returrns nothing, Consumer<T> is a good functional interface.
+        Consumer<Integer> consumerThree = lambda::nada;
+
+        consumer(consumerOne);
+        consumer(consumerTwo);
+        consumer2(consumerThree);
+    }
+
+    private void consumer(Consumer<Void> consumer){
+        consumer.accept(null);
+    }
+
+    private void consumer2(Consumer<Integer> consumer){
+        consumer.accept(null);
+    }
 
     /**
      * Just do simple String format tests.

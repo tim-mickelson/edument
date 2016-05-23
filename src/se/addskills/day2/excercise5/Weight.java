@@ -16,7 +16,7 @@ public class Weight {
 	 * @return Weight
 	 */
 	public double getWeight(WeightUnits unit) {
-		return this.weightInKG * WeightUnits.valueOf(unit);
+		return this.weightInKG *  unit.value();
 	}  // end function getWeight
 
 	/**
@@ -25,7 +25,7 @@ public class Weight {
 	 * @param weight weight in some unit
 	 */
 	public void setWeight(WeightUnits unit, double weight) {
-		this.weightInKG = weight / WeightUnits.valueOf(unit); 
+		this.weightInKG = weight / unit.value();
 	}  // end function setWeight
 
 	/**
@@ -34,7 +34,7 @@ public class Weight {
 	 * @param weight weight in some unit
 	 */
 	public void addWeight(WeightUnits unit, double weight) {
-		this.weightInKG += weight * WeightUnits.valueOf(unit);
+		this.weightInKG += weight * unit.value();
 	}  // end function addWeight
 
 }  // end class Weight

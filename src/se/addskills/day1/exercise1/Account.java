@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise1;
+package se.addskills.day1.exercise1;
 
 /**
  * Simple POJO with account balance implementing the IAccount interface.

@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise2B;
+package se.addskills.day1.exercise2B;
 
 /**
  * 1. Implement class that simulates Queue of objects T (actually contains a List<T>)

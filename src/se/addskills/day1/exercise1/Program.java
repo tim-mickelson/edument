@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise1;
+package se.addskills.day1.exercise1;
 
 /**
  * 1. Create POJO for products (name, price)

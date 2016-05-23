@@ -1,7 +1,6 @@
 package se.addskills.day2.excercise7;
 
-import se.addskills.day1.excercise4A_tim.CustomLogger;
-import se.addskills.day1.excercise4A_tim.Logger;
+import se.addskills.day1.exercise4A_tim.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

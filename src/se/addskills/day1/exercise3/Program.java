@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise3;
+package se.addskills.day1.exercise3;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class Program {
 	public static void main(String[] args) {
 		List<LanguageData> languageData = new ArrayList<>();
 		try {
-			languageData = ListLoader.LoadListFromFile("H:\\LanguageData.txt");
+			languageData = ListLoader.LoadListFromFile("c:\\tim\\LanguageData.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

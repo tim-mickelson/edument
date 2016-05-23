@@ -127,8 +127,7 @@ public class BookReader {
         for(int i=0;i<book.getChildNodes().getLength();i++){
             Node node = book.getChildNodes().item(i);
             // TODO PRINT BOOK ID
-            if(node.getNodeType()!=Node.TEXT_NODE){
-                if(node.getNodeName()!=null)
+            if(node.getNodeType()==Node.ELEMENT_NODE){
                 System.out.println(String.format("%s: %s", node.getNodeName(), node.getTextContent()));
             }
         }

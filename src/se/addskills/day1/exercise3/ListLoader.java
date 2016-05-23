@@ -1,4 +1,4 @@
-package se.addskills.day1.excercise3;
+package se.addskills.day1.exercise3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,12 +37,13 @@ public class ListLoader {
 			LanguageData lData = new LanguageData();
 			lData.setName(data[0]);
 			lData.setReleaseYear(Integer.parseInt(data[1]));
+			// since there can be ',' in the description we can't take data[2]
 			lData.setDescription(getDescription(line));
 			list.add(lData);
 		}
 		reader.close();
 		return list;
-	}
+	}  // end function loadListFromFile
 
 	/**
 	 * Get the rest after the second ',' character as description.
