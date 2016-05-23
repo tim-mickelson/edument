@@ -9,7 +9,7 @@ import java.util.Locale;
 public class Program {
 
     /**
-     * Create interface to implement function> "void log(String message);"
+     * Create interface to implement function <code>void log(String message);</code>
      *
      * Main class to run the example with various locales.
      * Just simply print some information to standard output well formatted.
@@ -20,7 +20,7 @@ public class Program {
      */
     public static void main(String[] args){
         // Create instance of custom logger
-        CustomLogger logger = new CustomLogger();
+        Logger logger = new CustomLogger();
         // Car attributes
         String brand = "Ferrari";
         Double price = 100356.05;

@@ -1,9 +1,12 @@
 package se.addskills.day1.exercise4A_tim;
 
+import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by purple.tim on 27/5/2015.
+ * Simple logger interface.
+ *
+ * @author Tim Mickelson
  */
 public interface Logger {
 
@@ -11,4 +14,6 @@ public interface Logger {
 
     void setLocale(Locale locale);
 
-}  // end interface Logger
+    void log(String brand, Double price, Date purchase);
+
+}

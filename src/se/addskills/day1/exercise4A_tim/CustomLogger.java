@@ -7,7 +7,7 @@ import java.util.Locale;
 /**
  * Exercise four.
  *
- * The purpouse of this exercise is to get aquanted with formatting currency and dates switching the Locale between Swedish, Brittish and US.
+ * The purpouse of this exercise is to get acquainted with formatting currency and dates switching the Locale between Swedish, British and US.
  *
  * 1) Create a class CustomLogger that has an encapsulated Locale attribute.
  * 2) Create a setter for the Locale so it is possible to alter the Locale externally.
@@ -28,14 +28,15 @@ public class CustomLogger  implements Logger {
     Locale locale = new Locale("sv", "SE");
 
     /**
-     * Print to standard output a formated string that is formatted with Locale.
+     * Print to standard output a formatted string that is formatted with Locale.
      *
      * @author Tim Mickelson
      * @since 27/05/2015
-     * @param brand
-     * @param price
-     * @param purchase
+     * @param brand Car brand
+     * @param price Car price
+     * @param purchase Date of purchase
      */
+    @Override
     public void log(String brand, Double price, Date purchase){
         // MessageFormat pattern
         String pattern = "Brand: {0} price: {1, number, currency}, Purchased: {2, date, full}";
@@ -46,13 +47,6 @@ public class CustomLogger  implements Logger {
         log(msgFormatter.format(params));
     }  // end function log
 
-
-    /**
-     * Change Locale of CustomLogger instance.
-     * @author Tim Mickelson
-     * @since 27/05/2015
-     * @param locale
-     */
     @Override
     public void setLocale(Locale locale){
         this.locale = locale;

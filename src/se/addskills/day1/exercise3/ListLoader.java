@@ -2,6 +2,8 @@ package se.addskills.day1.exercise3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,9 +27,16 @@ public class ListLoader {
 	 */
 	public static List<LanguageData> LoadListFromFile(String filename) throws IOException {
 		List<LanguageData> list = new ArrayList<>();
-		Path path = Paths.get(filename);
-		
-		BufferedReader reader = Files.newBufferedReader(path, Charset.defaultCharset());
+		URL url = ListLoader.class.getClassLoader().getResource(filename);
+
+		Path path = null;
+		try {
+			path = Paths.get(url.toURI());
+		} catch (URISyntaxException e) {
+			throw new RuntimeException(e);
+		}
+
+		BufferedReader reader = Files.newBufferedReader(path, Charset.forName("ISO-8859-1"));
 		String line;
 		// Loop over lines and parse
 		while ((line = reader.readLine()) != null) {

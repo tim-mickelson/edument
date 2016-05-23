@@ -19,11 +19,11 @@ public class Program {
 		stack.push(10);
 		stack.push(15);
 		stack.push(20);
-		
+
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
-		System.out.println(stack.pop());
+
 	}  // end function main
 
 }  // end class Program
