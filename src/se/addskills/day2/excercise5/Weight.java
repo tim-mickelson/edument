@@ -34,7 +34,7 @@ public class Weight {
 	 * @param weight weight in some unit
 	 */
 	public void addWeight(WeightUnits unit, double weight) {
-		this.weightInKG += weight * unit.value();
+		this.weightInKG += weight / unit.value();
 	}  // end function addWeight
 
 }  // end class Weight

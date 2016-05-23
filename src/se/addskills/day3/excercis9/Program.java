@@ -14,7 +14,7 @@ public class Program {
 	 *
 	 * Create a producer that will add money to the wallet and a consumer that will extract.
 	 *
-	 * Try removing the notify() in the add function, what will hapend? Since the Consumer after extracting will wait() it will not
+	 * Try removing the notify() in the add function, what will happen? Since the Consumer after extracting will wait() it will not
 	 * continue until the Producer has terminated it's thread that will send a notifyAll()
 	 *
 	 * @param args

@@ -10,8 +10,8 @@ public class Program {
 	 * Add weight in various units and print final solution to standard output.
 	 * units should be kg and lbs, but could also be e.g. gram
 	 *
-	 * Use equation 1kg = (1/2.20462)*x lbs
-	 *              1lbl= 2.20462*x kg
+	 * Use equation kg = (1/2.20462)*x lbs
+	 *              lbs= 2.20462*x kg
 	 *
 	 * 1. Create enumerator for weight types with weight factor
 	 * 2. Create a class that internally holds weight as kg shows why encapsulation is fundamental :)
@@ -20,7 +20,7 @@ public class Program {
 	 */
 	public static void main(String[] args) {
 		Weight weight = new Weight();
-		
+
 		weight.setWeight(WeightUnits.Gram, 550);
 		weight.addWeight(WeightUnits.Pound, 5);
 		weight.addWeight(WeightUnits.Kilogram, 5);

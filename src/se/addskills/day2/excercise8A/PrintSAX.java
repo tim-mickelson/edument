@@ -17,7 +17,8 @@ import java.util.List;
  * @since 01/06/2015
  */
 public class PrintSAX extends DefaultHandler {
-	// Bean for current Book bean
+	// Bean for+65241 current Book bean
+
 	private Book book = null;
 	// BookType enumerator for current tag type
 	private BookType type = BookType.unknown;
@@ -76,6 +77,7 @@ public class PrintSAX extends DefaultHandler {
 	 * @param qName
 	 * @param attrs
 	 */
+	@Override
 	public void startElement(String uri, String lName, String qName, Attributes attrs) {
 		// With this one row we can avoid the whole switch statement below
 		type = BookType.bookType(qName);
