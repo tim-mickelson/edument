@@ -1,5 +1,7 @@
 package se.addskills.day3.excercis9;
 
+import java.util.List;
+
 public class Program {
 
 	/**
@@ -28,5 +30,10 @@ public class Program {
 		consumer.start();
 		System.out.println("main is finished but the threads just keep on going :-)");
 	}  // end function main
+
+	private void test(){
+		Object object = null;
+		List<String> strings = (List<String>)object;
+	}
 
 }  // end class Program
